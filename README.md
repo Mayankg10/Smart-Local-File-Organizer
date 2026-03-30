@@ -18,6 +18,39 @@ Everything runs locally on your Mac. No cloud, no accounts, no internet needed.
 
 ---
 
+## Installation
+
+**Requirements:** macOS with Python 3 (pre-installed on all modern Macs).
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/Mayankg10/Smart-Local-File-Organizer.git ~/file-organizer
+
+# 2. Run the installer
+bash ~/file-organizer/install.sh
+```
+
+The installer will:
+- Verify Python 3 is available
+- Make scripts executable
+- Create the data directory (`~/.file-organizer/`)
+- Optionally set up the weekly auto-organizer (Sundays at 10 AM)
+
+That's it. No pip install, no brew, no dependencies.
+
+### Uninstall
+
+```bash
+# Stop the weekly auto-organizer
+launchctl unload ~/Library/LaunchAgents/com.user.file-organizer.plist
+
+# Remove everything
+rm -rf ~/file-organizer ~/.file-organizer
+rm ~/Library/LaunchAgents/com.user.file-organizer.plist
+```
+
+---
+
 ## How It Works
 
 ### File Organization
