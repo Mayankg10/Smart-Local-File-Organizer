@@ -9,7 +9,8 @@
 
 set -euo pipefail
 
-INSTALL_DIR="$HOME/file-organizer"
+# Auto-detect where this script lives (works regardless of folder name)
+INSTALL_DIR="$(cd "$(dirname "$0")" && pwd)"
 PLIST_NAME="com.user.file-organizer"
 PLIST_SRC="$INSTALL_DIR/com.user.file-organizer.plist"
 PLIST_DST="$HOME/Library/LaunchAgents/$PLIST_NAME.plist"
